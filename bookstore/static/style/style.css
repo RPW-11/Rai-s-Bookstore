@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,200;1,400&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-layout{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.books-categories{
+    margin-left: 20px;
+}
+.books-categories li{
+    list-style: none;
+}
+.books-categories li a{
+    text-decoration: none;
+}
+
+.books-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+}
+.books-container a{
+    text-decoration: none;
+    color: black;
+    transition: all 0.3 ease 0s;
+}
+.books-container a:hover{
+    color: rgb(255, 221, 0);
+}
+.book{
+    display: flex;
+    width: 400px;
+    height: 300px;
+    margin-top: 10px;
+    /* border: 3px solid black; */
+}
+.book-picture img{
+    width: auto;
+    max-height: 250px;
+}
+.book-contents{
+    margin-left: 15px;
+    position: relative;
+    width: 100%;
+}
+
+.navbar-container{
+    background-color: rgb(28, 28, 28);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+.navbar-container a{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+}
+.navbar-container input{
+    width: 700px;
+    height: 35px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+.navbar-container input[type="text"]{
+    padding-left: 10px;
+}
+.logo{
+    cursor: pointer;
+    color: white;
+}
+
+.logo img{
+    width: auto;
+    max-height: 70px;
+}
+
+.nav__links{
+    list-style: none;
+}
+.nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav__links li a{
+    transition: all 0.3 ease 0s;
+}
+.nav__links li a:hover{
+    color: rgb(255, 221, 0);
+}
+.cart{
+    display: inline-flex;
+}
+.cart p{
+    margin-left: 5px;
+}
+.cart i:hover{
+    color: rgb(255, 221, 0);
+}
+.user-button{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.user-button button{
+    padding: 9px 25px;
+    background-color: rgba(255, 221, 0, 1);
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+}
+.user-button button:hover{
+    background-color: rgba(255, 221, 0, .8);
+}
+
+.ratings i{
+    color: rgb(255, 225, 0);
+}
+
+.user-profile{
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    border: 3px solid green;
+    margin-top: 20px;
+}
+.user-profile img{
+    width: auto;
+    max-height: 100px;
+}
+.add-to-cart{
+    position: absolute;
+    bottom: 45px;
+}
+.add-to-cart button{
+    padding: 9px 25px;
+    background-color: rgba(255, 221, 0, 1);
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+}
+.add-to-cart button:hover{
+    background-color: rgba(255, 221, 0, .8);
+}
+
+.cart-col{
+    margin-top: 20px;
+}
+.box-element{
+    margin: auto;
+    margin-bottom: 10px;
+    width: 80%;
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 15px;
+    box-shadow: 5px 2px 5px rgba(170, 170, 170, 0.391);
+}
+.cart-table{
+    margin: 10px 10px;
+    width: 100%;
+}
+.cart-table .user-button {
+    float: right;
+    margin-right: 10px;
+}
+.cart-table p{
+    font-weight: normal;
+    font-size: 24px;
+}
+.box-element .user-button button{
+    margin: 10px 10px;
+}
+.cart-row{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+    margin: 10px 10px;
+}
+/* .cart-row div{
+    border: 3px solid;
+} */
+.img-row{
+    display: block;
+    margin: auto;
+    width: 100px;
+}
+.quantity{
+    display: flex;
+    width: 90%;
+}
+.quantity > div{
+    flex-grow: 1;
+}
+.quantity i{
+    cursor: pointer;
+}
+
+
+.checkout-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+.checkout-container .hr{
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.checkout-container hr{
+    width: 95%;
+    margin: auto;
+}
+
+.checkout-box{
+    margin: 15px;
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 15px;
+    box-shadow: 5px 2px 5px rgba(170, 170, 170, 0.391);
+    align-self: flex-start;
+}
+.checkout-box h3{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.373);
+}
+.checkout-box.summary{
+    margin-bottom: 10px;
+}
+.user-info{
+    display: flex;
+}
+.shipping-info{
+    display: flex;
+}
+.form-field{
+    padding: 5px 10px;
+}
+.form-field label{
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.form-field>input{
+    width: 350px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.366);
+    border-radius: 5px;
+    margin-top: 5px;
+}
+.form-field>input[type="text"],[type="email"]{
+    padding-left: 7px;
+}
+.continue-wrapper{
+    text-align: center;
+}
+.checkout-continue{
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 9px 25px;
+    background-color: rgba(255, 221, 0, 1);
+    border-style: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+}
+.checkout-continue:hover{
+    background-color: rgb(244, 212, 3);
+}
+
+.checkout-box.summary .img-row{
+    width: 50px;
+}
+.total-detail{
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: inline-block;
+}
+.total-detail .wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+.total-detail .right{
+    font-weight: bold;
+    flex: 1;
+    text-align: right;
+}
+.back-to-cart{
+    margin-top: 10px;
+    margin-left: 45px;
+    padding: 9px 25px;
+    background-color: rgba(255, 221, 0, 1);
+    border-style: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3 ease 0s;
+}
+.hidden{
+    display: none!important;
+}
+.payment h3{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.373);
+}
+

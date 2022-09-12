@@ -1,0 +1,25 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="book-container">
+    <div class="image-title-container">
+        <div>
+            <h1>Image</h1>
+        </div>
+        <div>
+            <h2>{{book}}</h2>
+            <strong>{{book.created|date:"F d, Y"}}</strong>
+            <br>
+            <small>by {{book.author}}</small>
+            <p>{{book.ratings}} star ratings</p>
+            <hr>
+            <p>${{book.price}}</p>
+        </div>
+    </div>
+    <div>
+        <h2>Cart</h2>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="user-profile">
+    <img src="{{request.user.customer.profile_pic.url}}" alt="">
+    <h2>Hi {{request.user}}</h2>
+</div>
+
+{% endblock %}

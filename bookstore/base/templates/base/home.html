@@ -1,0 +1,55 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+<h1>WELCOME TO RAI's BOOKSTORE</h1>
+{% if request.user.is_authenticated %}
+<h2>Hi {{request.user}}</h2>
+{% endif %}
+<div class="menu-bar">
+    <a href="{% url 'sell-book' %}">Sell a book</a>
+</div>
+<div class="main-layout">
+    <div class="books-categories">
+        <h2>Categories</h2>
+        <ul>
+            <li><a href="">All</a></li>
+            <li><a href="">Non-Fiction</a></li>
+            <li><a href="">Novels</a></li>
+            <li><a href="">Fiction</a></li>
+            <li><a href="">Science</a></li>
+            <li><a href="">History</a></li>
+        </ul>
+    </div>
+    <div class="books-container">
+        {% for book in books %}
+        <div class="book">
+            <div class="book-picture">
+                <img src="{{book.image.url}}" alt="">
+            </div>
+            <div class="book-contents">
+                <a href="{% url 'book-profile' book.id %}"><h2>{{book}}</h2></a>
+                <p>{{book.description|truncatechars:50}}</p>
+                <div class="ratings">
+                    {% if book.ratings is not None %}
+                    {% for i in book.ratings %}
+                        <i class="fa fa-star"></i>
+                    {% endfor %}
+                    {% else %}
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                        <i class="fa fa-star-o"></i>
+                    {% endif %}
+                </div>
+                <p>${{book.price}}</p>
+                <a class="add-to-cart"><button class="add-cart-btn" data-book="{{book.id}}" data-action="add">Add to cart</button></a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
